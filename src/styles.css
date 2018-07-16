@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700");
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -892,8 +891,56 @@ table {
 [class^="col-"].no-gutter {
   padding: 0; }
 
+@font-face {
+  font-family: 'Inter UI';
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/Inter-UI-Regular.woff2") format("woff2"), url("./assets/fonts/Inter-UI-Regular.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Inter UI';
+  font-style: italic;
+  font-weight: 400;
+  src: url("./assets/fonts/Inter-UI-Italic.woff2") format("woff2"), url("./assets/fonts/Inter-UI-Italic.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Inter UI';
+  font-style: normal;
+  font-weight: 500;
+  src: url("./assets/fonts/Inter-UI-Medium.woff2") format("woff2"), url("./assets/fonts/Inter-UI-Medium.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Inter UI';
+  font-style: italic;
+  font-weight: 500;
+  src: url("./assets/fonts/Inter-UI-MediumItalic.woff2") format("woff2"), url("./assets/fonts/Inter-UI-MediumItalic.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Inter UI';
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/fonts/Inter-UI-Bold.woff2") format("woff2"), url("./assets/fonts/Inter-UI-Bold.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Inter UI';
+  font-style: italic;
+  font-weight: 700;
+  src: url("./assets/fonts/Inter-UI-BoldItalic.woff2") format("woff2"), url("./assets/fonts/Inter-UI-BoldItalic.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Inter UI';
+  font-style: normal;
+  font-weight: 900;
+  src: url("./assets/fonts/Inter-UI-Black.woff2") format("woff2"), url("./assets/fonts/Inter-UI-Black.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Inter UI';
+  font-style: italic;
+  font-weight: 900;
+  src: url("./assets/fonts/Inter-UI-BlackItalic.woff2") format("woff2"), url("./assets/fonts/Inter-UI-BlackItalic.woff") format("woff"); }
+
 body {
-  font-family: "Roboto", sans-serif; }
+  font-family: "Inter UI", sans-serif; }
 
 .page-title {
   font-size: 2.25rem;
@@ -948,10 +995,23 @@ header {
   justify-content: space-between;
   padding: 2rem 2rem 0; }
 
+.profile-navigation ul {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center; }
+  .profile-navigation ul li {
+    list-style-type: none;
+    width: 2.5rem; }
+    .profile-navigation ul li svg {
+      display: block;
+      height: 1.5rem;
+      width: 1.5rem; }
+
 .profile-img {
-  height: 3rem;
-  width: 3rem;
-  line-height: 3rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  line-height: 2.5rem;
   font-weight: 500;
   font-size: 1.5em;
   text-align: center;

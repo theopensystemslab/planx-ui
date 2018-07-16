@@ -22,10 +22,27 @@ header{
   justify-content: space-between;
   padding: 2rem 2rem 0;
 }
+.profile-navigation{
+  ul{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+    li{
+      list-style-type: none;
+      width: rem(40px);
+      svg{
+        display: block;
+        height: 1.5rem;
+        width: 1.5rem;
+      }
+    }
+  }
+}
 .profile-img{
-  height: 3rem;
-  width: 3rem;
-  line-height: 3rem;
+  height: rem(40px);
+  width: rem(40px);
+  line-height: rem(40px);
   font-weight: 500;
   font-size: 1.5em;
   text-align: center;
