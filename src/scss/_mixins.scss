@@ -1,0 +1,131 @@
+/* =======================================================================
+## ++ Media Queries
+========================================================================== */
+
+/*
+    Used for media queries.
+    Add these mixins in your normal scss flow.
+
+    Eg.
+    .container{
+        width:1024px;
+
+        @include tablets{
+            width:90%;
+        }
+    }
+*/
+
+@mixin xs-only {
+  @media (max-width: #{$s-width - rem(1px)}) {
+    @content;
+  }
+}
+
+@mixin s-only {
+  @media (min-width: #{$s-width}) and (max-width: #{$sm-width - rem(1px)}) {
+    @content;
+  }
+}
+
+@mixin sm-only {
+  @media (min-width: #{$sm-width}) and (max-width: #{$md-width - rem(1px)}) {
+    @content;
+  }
+}
+
+@mixin md-only {
+  @media (min-width: #{$md-width}) and (max-width: #{$lg-width - rem(1px)}) {
+    @content;
+  }
+}
+
+@mixin max-s {
+  @media (max-width: #{$sm-width - rem(1px)}) {
+    @content;
+  }
+}
+
+@mixin max-sm {
+  @media (max-width: #{$md-width - rem(1px)}) {
+    @content;
+  }
+}
+
+@mixin max-md {
+  @media (max-width: #{$lg-width - rem(1px)}) {
+    @content;
+  }
+}
+
+@mixin min-s {
+  @media (min-width: #{$s-width}) {
+    @content;
+  }
+}
+
+@mixin min-sm {
+  @media (min-width: #{$sm-width}) {
+    @content;
+  }
+}
+
+@mixin min-md {
+  @media (min-width: #{$md-width}) {
+    @content;
+  }
+}
+
+@mixin min-lg {
+  @media (min-width: #{$lg-width}) {
+    @content;
+  }
+}
+
+/* =======================================================================
+## ++ Unit transform
+========================================================================== */
+
+/*
+    Used for making containers have width in percentages.
+    Usage: define elemnt width in px and the width of parent elemnt in px.
+    eg. .block{width:cp(512px, 1024px)} this will result in .block{width:50%;}
+*/
+
+@function cp($target, $container) {
+    @return ($target / $container) * 100%;
+}
+
+/*
+    Used for making px values convert to rem values
+    Usage: define font-size in px and it will convert to rems
+    eg. font-size: rem(14px);
+*/
+
+@function rem($target, $context: $base-font-size) {
+   @if $target == 0 { @return 0 }
+   @return $target / $context + 0rem;
+}
+$base-font-size:16px;
+
+
+
+// VARIABLES
+$xs-gutter: rem(20px);
+$sm-gutter: $xs-gutter*1.5;
+$md-gutter: $xs-gutter*2;
+
+$s-width: rem(600px);
+$sm-width: rem(768px);
+$md-width: rem(1192px);
+$lg-width: rem(1440px);
+$wrapperMaxWidth: rem(1440px);
+
+/* COLORS */
+$themeColor: #00a1b5;
+$themeBgColor: #f7f7f8;
+$themeTextColor: #ffffff;
+$linkColor: #38afc2;
+
+$header-height-xs: rem(50px);
+$header-height: rem(70px);

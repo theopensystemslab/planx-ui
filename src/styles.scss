@@ -1,0 +1,119 @@
+@import './scss/_reset';
+@import './scss/_mixins';
+@import './scss/_grid';
+@import './scss/_type';
+
+body{
+  background-color: #cccccc;
+}
+.wrapper{
+  max-width: $wrapperMaxWidth;
+  background: $themeBgColor;
+  margin: 0 auto;
+}
+header{
+  background-color: $themeColor;
+  color: #fff;
+}
+.pre-header{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 2rem 0;
+}
+.profile-img{
+  height: 3rem;
+  width: 3rem;
+  line-height: 3rem;
+  font-weight: 500;
+  font-size: 1.5em;
+  text-align: center;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.25);
+  display: inline-block;
+}
+img{
+  max-width: 100%;
+  display: block;
+}
+ol.breadcrumbs{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  padding: 1rem 0 1.75rem;
+  li{
+    list-style: decimal inside;
+    font-weight: 500;
+    font-size: rem(20px);
+    color: currentColor;
+    &:not(:last-child){
+      margin-right: 2em;
+      &::after{
+        content: '';
+        border-right: 2px solid currentColor;
+        border-bottom: 2px solid currentColor;
+        display: block;
+        vertical-align: middle;
+        height: 0.35em;
+        width: 0.35em;
+        margin-left: 1.5em;
+        transform: rotate(-45deg);
+        display: inline-block;
+      }
+    }
+    &:not(.is-active){
+      opacity: 0.75;
+    }
+  }
+}
+
+.ui.accordion{
+  border: 1px solid #e4e4e4;
+  .title{
+    font-size: rem(20px);
+    padding: 1.25rem;
+    border-left: 3px solid #FA9507;
+    padding-right: 4em;
+    position: relative;
+    cursor: pointer;
+    &:not(:first-child){
+      border-top: 1px solid #e4e4e4;
+    }
+    &::after{
+      content: '';
+      height: 0.5rem;
+      width: 0.5rem;
+      border-right: 2px solid #bbb;
+      border-bottom: 2px solid #bbb;
+      transform: rotate(45deg);
+      display: block;
+      position: absolute;
+      right: 1.55rem;
+      top: 1.5rem;
+    }
+  }
+  .content{
+    border-left: 3px solid #FA9507;
+    max-height: 0;
+    box-sizing: content-box;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    &.active{
+      max-height: 20em;
+    }
+    p{
+      max-width: 42rem;
+      padding: 0 1.25rem 1.25rem;
+      font-size: 1em;
+    }
+    *:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
+footer{
+  padding: 4rem;
+  text-align: center;
+}
