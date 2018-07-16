@@ -12,7 +12,7 @@ const Header = styled.header`
   > .pre-header{
     padding: 1rem 1rem 0;
     @media (min-width: 62rem){
-      padding: 2rem 2rem 0; 
+      padding: 2rem 2rem 0;
     }
   }
 `
@@ -59,6 +59,10 @@ const ProfileNav = () => {
   )
 }
 
+
+
+
+
 export function MainHeader() {
   return (
     <Header>
@@ -68,11 +72,19 @@ export function MainHeader() {
       </div>
       <div className="container">
         <div className="page-title">Front Extension 42 Willow Way SE15</div>
-        <ol className="breadcrumbs">
-          <li>Project Details</li>
-          <li className="is-active">Advice</li>
-          <li>Next Step</li>
-        </ol>
+        <div className="row between-xs">
+          <div className="col-xs-12 col-md-7">
+            <ol className="breadcrumbs">
+              <li>Project Details</li>
+              <li className="is-active">Advice</li>
+              <li>Next Step</li>
+            </ol>
+          </div>
+          <div className="col-xs-12 col-md-5 header-actions">
+            <button><IconPlus/> Share</button>
+            <button><IconPlus/> Save Progress</button>
+          </div>
+        </div>
       </div>
     </Header>
   )
