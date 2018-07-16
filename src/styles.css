@@ -78,15 +78,25 @@ table {
   align-items: stretch;
   overflow: hidden; }
   .wrapper section.main {
-    flex-grow: 1;
-    padding-top: 4em; }
-    .wrapper section.main > .container {
+    flex-grow: 1; }
+    @media (min-width: 48rem) {
+      .wrapper section.main {
+        padding-top: 4em; } }
+    .wrapper section.main main {
       background-color: #fff; }
+      @media (max-width: 74.4375rem) {
+        .wrapper section.main main {
+          margin-left: -1rem;
+          margin-right: -1rem; } }
 
 .container {
   margin: 0 auto;
   width: 100%;
-  max-width: 70.5rem; }
+  max-width: 74.5rem;
+  padding: 0 1rem; }
+  @media (min-width: 48rem) {
+    .container {
+      padding: 0 2rem; } }
 
 .row {
   box-sizing: border-box;
@@ -943,29 +953,42 @@ body {
   font-family: "Inter UI", sans-serif; }
 
 .page-title {
-  font-size: 2.25rem;
+  font-size: 1.75rem;
+  line-height: 1.3;
   font-weight: 400;
   margin: 1em 0; }
+  @media (min-width: 48rem) {
+    .page-title {
+      font-size: 2.25rem; } }
 
 .section-title {
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.5em; }
+  @media (min-width: 48rem) {
+    .section-title {
+      font-size: 2.25rem; } }
   .section-title:not(:first-child) {
     padding-top: 1em; }
 
 .section-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: bold;
   padding: 0.75em 0 1em; }
+  @media (min-width: 48rem) {
+    .section-subtitle {
+      font-size: 1.5rem; } }
 
 p {
   font-size: 1.125rem;
   line-height: 1.4;
   margin-bottom: 1.15em; }
   p.lead {
-    font-size: 1.375rem;
+    font-size: 1.125rem;
     line-height: 1.5; }
+    @media (min-width: 48rem) {
+      p.lead {
+        font-size: 1.375rem; } }
   p a {
     color: #38afc2; }
 
@@ -1048,16 +1071,28 @@ ol.breadcrumbs {
         display: inline-block; }
     ol.breadcrumbs li:not(.is-active) {
       opacity: 0.75; }
+    @media (max-width: 37.4375rem) {
+      ol.breadcrumbs li {
+        visibility: hidden;
+        position: absolute;
+        font-size: 1rem; }
+        ol.breadcrumbs li.is-active, ol.breadcrumbs li.is-active ~ li {
+          position: static;
+          visibility: visible; } }
 
 .ui.accordion {
   border: 1px solid #e4e4e4; }
   .ui.accordion .title {
-    font-size: 1.25rem;
-    padding: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.35;
+    padding: 1rem 1.25rem;
     border-left: 3px solid #FA9507;
     padding-right: 4em;
     position: relative;
     cursor: pointer; }
+    @media (min-width: 48rem) {
+      .ui.accordion .title {
+        font-size: 1.25rem; } }
     .ui.accordion .title:not(:first-child) {
       border-top: 1px solid #e4e4e4; }
     .ui.accordion .title::after {
@@ -1082,7 +1117,10 @@ ol.breadcrumbs {
     .ui.accordion .content p {
       max-width: 42rem;
       padding: 0 1.25rem 1.25rem;
-      font-size: 1em; }
+      font-size: 0.875rem; }
+      @media (min-width: 48rem) {
+        .ui.accordion .content p {
+          font-size: 1rem; } }
     .ui.accordion .content *:last-child {
       margin-bottom: 0; }
 

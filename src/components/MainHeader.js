@@ -5,9 +5,25 @@ import LogoImg from "../img/Logo.png"
 import AvatarImg from "../img/Avatar.png"
 
 
+
+const Header = styled.header`
+  background-color: #00a1b5;
+  color: #fff;
+  > .pre-header{
+    padding: 1rem 1rem 0;
+    @media (min-width: 62rem){
+      padding: 2rem 2rem 0; 
+    }
+  }
+`
+
 const HeaderLogo = styled.div`
-  max-width: 7.5rem;
-  max-height: 5rem;
+  width: 5.625rem;
+  height: 3.75rem;
+  @media (min-width: 37.5rem){
+    width: 7.5rem;
+    height: 5rem;
+  }
   > img{
     max-width: 100%;
     max-height: 100%:
@@ -45,7 +61,7 @@ const ProfileNav = () => {
 
 export function MainHeader() {
   return (
-    <header>
+    <Header>
       <div className="pre-header">
         <HeaderLogo><img src={LogoImg} alt="Logo"/></HeaderLogo>
         <ProfileNav></ProfileNav>
@@ -58,6 +74,6 @@ export function MainHeader() {
           <li>Next Step</li>
         </ol>
       </div>
-    </header>
+    </Header>
   )
 }

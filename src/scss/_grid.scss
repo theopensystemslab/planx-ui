@@ -10,9 +10,15 @@
   overflow: hidden;
   section.main{
     flex-grow: 1;
-    padding-top: 4em;
-    &>.container{
+    @include min-sm{
+      padding-top: 4em;
+    }
+    main{
       background-color: #fff;
+      @include max-sm{
+        margin-left: -1rem;
+        margin-right: -1rem;
+      }
     }
   }
  }
@@ -20,7 +26,11 @@
  .container{
    margin: 0 auto;
    width: 100%;
-   max-width: rem(1128px);
+   max-width: rem(1192px);
+   padding: 0 1rem;
+   @include min-sm{
+     padding: 0 2rem;
+   }
  }
 
 
