@@ -4,7 +4,11 @@
 @import './scss/_type';
 
 body{
-  background-color: #cccccc;
+  background-color: #ccc;
+}
+.style-guide{
+  padding: 4em;
+  background-color: #f7f7f8;
 }
 .wrapper{
   max-width: $wrapperMaxWidth;
@@ -12,7 +16,7 @@ body{
   margin: 0 auto;
 }
 header{
-  background-color: $themeColor;
+  background-color: $themeColorPrimary;
   color: #fff;
 }
 .pre-header{

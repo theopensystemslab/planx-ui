@@ -19,6 +19,5 @@ const IconPlus = () => {
 }
 
 export {
-    IconSearch,
-    IconPlus
+    IconSearch, IconPlus
 }
